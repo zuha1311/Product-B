@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TailorCV</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/oUrJSAuOb9YFPyUm/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+
+    document.getElementById("myForm").reset();
+    //document.querySelector("#FileUpload1").value = '';
+}
+</script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .centered {
+  position: absolute;
+  white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+
+        color: rgba(0, 0, 0, 0.84);
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 56px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.parent{
+    position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1{
+    position: relative;
+  top: 0;
+  left: 0;
+  
+}
+.image2 {
+  position: absolute;
+  top: 232px;
+  left: 174px;
+ 
+}
+.image3 {
+  position: absolute;
+  top: 180px;
+  left: 500px;
+ 
+}
+.image4 {
+  position: absolute;
+  top: 225px;
+  left: 950px;
+ 
+}
+
+.heading{
+    font-family: 'Crimson Pro';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 71px;
+
+}
+
+.paragraphTextStyle{
+    font-family: 'Crimson Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 44px;
+}
+
+.infoPageBackground
+{
+    background: linear-gradient(180deg, #FFE8D3 0%, rgba(255, 212, 173, 0.63) 100%);
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  margin-right: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  
+}
+
+
+</style>
+</head>
+<body id="myPage">
+
+    
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-indigo"><i class="fa fa-home w3-margin-right"></i>TailorCV</a>
+  <a href="#intro" class="w3-bar-item w3-button w3-hide-small w3-hover-white">What's ATS?</a>
+  <a href="#upload" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Upload</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+  </div>
+  
+    
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#intro" class="w3-bar-item w3-button">What's ATS?</a>
+    <a href="#upload" class="w3-bar-item w3-button">Upload</a>
+  
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="parent w3-display-container w3-animate-opacity">
+  <img class="image1" src="homepage.jpeg" alt="homePage" style="width:100%;min: height 350px; max-height: 750px;opacity: 0.8;">
+  <img class="image2" src="pieChart1.png" alt="data">
+  <img class="image3" src="pieChart2.png" alt="data">
+  <img class="image4" src="pieChart3.png" alt="data">
+    <div class="centered">Did you know 85% CVs are rejected by ATS everyday!</div>
+ 
+</div>
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64" style="background: linear-gradient(180deg, #fcd7b5 0%, rgba(249, 235, 222, 0.63) 100%);" id="intro" >
+
+<div class="w3-quarter">
+<h2 class="heading">Our Work</h2>
+<p class="paragraphTextStyle" style="font-size: 30px; line-height: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-indigo">
+ 
+  <div class="w3-container">
+  <h3 class="heading">Whats ATS</h3>
+  
+  <p class="paragraphTextStyle" style="font-size: 30px; line-height: 30px;">Applicant tracking System  (ATS) is a software that manages your entire hiring and recruitment process. It helps you to speed up candidate management and significantly reduce time-to-fill.</p>
+ 
+  
+   
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-indigo">
+
+  <div class="w3-container">
+  <h3 class="heading">How does it work?</h3>
+  
+  <p class="paragraphTextStyle" style="font-size: 30px; line-height: 30px;">Applicant tracking System (ATS) is a software that manages your entire hiring and recruitment process. It helps you to speed up candidate management and significantly reduce time-to-fill.</p>
+  
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-indigo">
+  
+  <div class="w3-container">
+  <h3 class="heading">The numbers</h3>
+
+  <p class="paragraphTextStyle" style="font-size: 30px; line-height: 30px;">Applicant tracking System (ATS) is a software that manages your entire hiring and recruitment process. It helps you to speed up candidate management and significantly reduce time-to-fill.</p>
+  
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Container -->
+<div class="w3-container">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+<!-- Upload Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="upload" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000641 0.01%, #FFE8D3 100%); ;">
+    <h2 style="color:#ffffff ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 50px;">Upload your CV</h2>
+    <p style="color:#d0d0d0 ;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 40px;">Click on the button below to upload your CV</p><br>
+    
+    <form id="myForm">
+    <div class="w3-half w3-margin-bottom">
+        <img id="imgFileUpload" alt="Select File" title="Select File" src="uploadButton.png" style="cursor: pointer" />
+        <br />
+        <span id="spnFilePath"></span>
+        <input type="file" id="FileUpload1" style="display: none" required name="document"/>
+        <script type="text/javascript">
+            window.onload = function () {
+                var fileupload = document.getElementById("FileUpload1");
+                var filePath = document.getElementById("spnFilePath");
+                var image = document.getElementById("imgFileUpload");
+                image.onclick = function () {
+                    fileupload.click();
+                };
+                fileupload.onchange = function () {
+                    var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+                    filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+                };
+            };
+        </script>
+
+    </div>
+
+    <div class="w3-half w3-margin-bottom">
+        
+            
+                <label for="cname" class="paragraphTextStyle" style="font-size:32px ;">Company Name</label>
+                <input type="text" id="cname" name="cname" placeholder="Enter name of the company" required>
+            
+                <label for="jobtitle" class="paragraphTextStyle" style="font-size:32px ;">Job Title</label>
+                <input type="text" id="jobtitle" name="jobtitle" placeholder="Enter the job title" required>     
+               
+               
+                <label for="jobdescription" class="paragraphTextStyle" style="font-size:32px ;">Job Description</label>
+                <input type="text" id="jobdescription" name="jobDescription"  placeholder="Enter the job description" style="height: 200px;" required>
+            
+                <button class="w3-indigo paragraphTextStyle" style="font-size:32px; width: 200px;" onclick="SubForm()">Submit</button>
+                <!-- <input type="submit" value="Submit" class="w3-indigo paragraphTextStyle" style="font-size:32px"> -->
+             
+            
+         </div>
+</form>
+    
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact" style="background: rgba(0, 6, 65, 0.9);">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input paragraphTextStyle" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-indigo">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.linkedin.com/in/jonathan-crowther1/" target="_blank">Jonny</a> and <a href="https://www.linkedin.com/in/zuha13k/" target="_blank"> Zuha</p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC1K21uZ0c3xHD51-YsxsqbdSdeA_NQuWs",
+    authDomain: "productb-7c7ca.firebaseapp.com",
+    projectId: "productb-7c7ca",
+    storageBucket: "productb-7c7ca.appspot.com",
+    messagingSenderId: "710126350785",
+    appId: "1:710126350785:web:8f48ef982c9acefe557f40",
+    measurementId: "G-ZKYDN8C1NG"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+</body>
+</html>
